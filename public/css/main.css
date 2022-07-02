@@ -1,0 +1,416 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+  --primary-color:white;
+  --secondary-color:rgb(61,68,73);
+  --highlight-color:#1aa7f8;
+
+  --dt-status-available-color:greenyellow;
+  --dt-status-away-color:lightsalmon;
+  --dt-status-offline-color:lightgray;
+
+  --dt-padding:12px;
+  --dt-padding-s:6px;
+  --dt-padding-xs:2px;
+  --color-text:#1aa7f8;
+
+  --dt-border-radius:3px;
+
+  --dt-background-color-container: #ffffff;
+  --dt-border-color:var(--secondary-color);
+  --dt-bg-color:var(--highlight-color);
+  --dt-text-color:var(--primary-color);
+  --dt-bg-active-button:var(--highlight-color);
+  --dt-text-color-button:var(--primary-color);
+  --dt-text-color-active-button:var(--primary-color);
+  --dt-hover-cell-color:var(--highlight-color);
+  --dt-even-row-color:var(--secondary-color);
+  --dt-focus-color:var(--highlight-color);
+  --dt-input-background-color:var(--secondary-color);
+  --dt-input-color:var(--primary-color);
+}
+.container_main{
+    display: grid;
+    grid-template-columns: 410px auto;
+    max-width: 1610px;
+    margin: 3rem auto;
+    gap: 2rem;
+    width: 100%;
+    
+}
+@media (max-width: 1200px) {
+    
+    .container_main{
+        width: 90%;
+        max-width: 1000px;
+        margin: 4rem auto;
+        background: red;
+        
+    }   
+    }
+.registro_product h2{
+    
+    background: #1aa7f8;
+    color: white;
+    text-align: center;
+    padding: 0.620rem;
+}
+
+.registro_product{
+    border: 1px solid #1aa7f8;
+    background: white;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px .7px rgb(202, 202, 202);
+}
+
+.boxs{
+    display: flex;
+    justify-content: space-between;
+   
+    margin: 0 auto;
+    
+}
+
+.one_box{
+    margin: 1rem;
+    margin-bottom: 3rem;
+}
+
+.three_box{
+    margin: 1rem;
+}
+
+.select{
+    width: 100%;
+}
+
+.label-select{
+    display: block;
+    margin-bottom: 4px;
+}
+
+.input_code{
+    padding: 3px;
+    border: 1px solid rgb(79, 79, 79);
+    border-radius: 4px;
+    outline: none;
+    font-size: 15px;
+
+}
+.input_code:focus{
+    border:1px solid #1aa7f8;
+    box-shadow: 0px 0px 2px 0.4px #1aa7f8;
+}
+
+.registro{
+    border: 1px solid #929191;
+    margin: 5px;
+  
+    border-radius: 3px;
+    box-shadow: inset  0px 0px 2px 0.4px rgb(186, 186, 186) ;
+    position: relative;
+    
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    margin: 40px 10px 20px 10px;
+    
+}
+
+.input_co{
+    width: 100%;
+    display: block;
+    margin: 0px 10px;
+    outline: none;
+    border: 1px solid rgb(79, 79, 79);
+    border-radius: 4px;
+    padding: 3px;
+    font-size: 15px;
+
+}
+
+.input_co:focus{
+    border:1px solid #1aa7f8;
+    box-shadow: 0px 0px 2px 0.4px #1aa7f8;
+   
+
+}
+
+.infoprodct{
+    display: flex;
+    flex-direction: column;
+    gap: 0.43rem;
+}
+.infotwo{
+  
+    width: 100%;
+    margin: 2px;
+  
+}
+.infoone{
+    display: flex;
+   
+    align-items: center;
+    margin: 10px;
+    
+}
+.tato{
+    width: 100%;
+    display: block;
+    margin: 3px auto;
+
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+}
+
+.register_date{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem;
+    align-items: center;
+}
+
+.green_botton{
+    background: #1aa7f8 ;
+    border: 1px solid #1aa7f8 ;
+    padding: 6px;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+.green_botton:hover{
+    background: #0094e9 ;
+}
+
+.red_botton{
+    background: red ;
+    border: 1px solid red ;
+    padding: 6px;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+.red_botton:hover{
+    background: 
+    rgb(217, 46, 46) ;
+}
+
+.title_product{
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: -0.88rem;
+    left: 1rem;
+    padding: 1px 4px;
+    display: block;
+
+}
+
+.datatable-container{
+  background:var(--dt-background-color-container);
+  border-radius:var(--dt-border-radius);
+  color: #000;
+
+  max-width: 1200px;
+
+  font-size:12px;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px 10px rgb(241, 241, 241);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.datatable-container .header-tools{
+  border-bottom:solid 1px var(--dt-border-color);
+  padding:var(--dt-padding);
+  display:flex;
+  align-items:baseline;
+  justify-content: space-between;
+}
+.datatable-container .header-tools .search{
+  width: 250px;
+
+}
+.datatable-container .header-tools .search .search-input{
+  width:100%;
+  background-color: #fff;
+  display:block;
+  box-sizing:border-box;
+  padding: 8px;
+  border-radius: 6px;
+  border:solid 1px var(--dt-border-color);
+  color: #000;
+  outline: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.datatable-container .header-tools .tools{
+width:70%;
+}
+.datatable-container .header-tools .tools ul{
+margin:0;
+padding:0;
+display:flex;
+justify-content:start;
+align-items:baseline;
+}
+.datatable-container .header-tools .tools ul li{  
+  display:inline-block;
+ margin:0 var(--dt-padding-xs);
+ align-items:baseline;
+ color: #000;
+}
+.datatable-container .footer-tools{
+ padding:var(--dt-padding);
+ display:flex;
+ align-items:baseline;
+}
+.datatable-container .footer-tools .list-items{
+  width:50%;
+}
+.datatable-container .footer-tools .pages{
+  margin-left:auto;
+  margin-right:0;
+  width:50%;
+}
+.datatable-container .footer-tools .pages ul{
+  margin:0;
+  padding:0;
+  display:flex;
+  align-items:baseline;
+  justify-content:flex-end;
+}
+.pages ul li {
+  list-style: none;
+  margin: 4px;
+  color: #fff;
+}
+.datatable-container.footer-tools .pages ul li{
+ display:inline-block;
+
+ list-style: none;
+}
+tbody tr td .delete i{
+
+  background: red;
+  color: #fff;
+  padding: 2px;
+  border-radius: 50%;
+}
+tbody tr td .editar i{
+
+  background: rgb(13, 209, 72);
+  color: #fff;
+  padding: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.datatable-container .footer-tools .pages ul li button,
+.datatable-container .header-tools .tools ul li button{
+ color:var(--dt-text-color-button);
+ width:100%;
+ box-sizing:border-box;
+ border:0;
+ border-radius:var(--dt-border-radius);
+ background:transparent;
+ cursor:pointer;
+ list-style: none;
+ color: #fff;
+ -webkit-border-radius:var(--dt-border-radius);
+ -moz-border-radius:var(--dt-border-radius);
+ -ms-border-radius:var(--dt-border-radius);
+ -o-border-radius:var(--dt-border-radius);
+}
+.datatable-container .footer-tools .pages ul li button:hover,
+.datatable-container .header-tools .tools ul li button:hover{
+ background:var(--dt-bg-active-button);
+ color:var(--dt-text-color-active-button);
+ border-radius: 0.3rem;
+ -webkit-border-radius: 0.3rem;
+ -moz-border-radius: 0.3rem;
+ -ms-border-radius: 0.3rem;
+ -o-border-radius: 0.3rem;
+}
+
+.datatable-container .footer-tools .pages  > ul > li > button.active{
+  background:var(--dt-bg-color);
+  color: #fff;
+  border-radius:var(--dt-border-radius);
+}
+.datatable-container .footer-tools .pages ul li button,
+.datatable-container .footer-tools .pages ul li span,
+.datatable-container .header-tools .tools ul li button{
+ padding:var(--dt-padding-s) var(--dt-padding);
+}
+.datatable-container .datatable{
+  border-collapse: collapse;
+  width: 100%;
+}
+.datatable-container .footer-tools .pages ul li button,
+.datatable-container .footer-tools .pages ul li span,
+.datatable-container .header-tools .tools ul li button{
+ padding: var(--dt-padding-s) var(--dt-padding);
+ color: #000;
+
+}
+.datatable-container .datatable th{
+  font-weight:bolder;
+  text-align:left;
+  border-bottom:solid 1px var(--dt-border-color);
+  text-transform: uppercase;
+  margin: 0.20rem;
+  
+}
+.span_tittle{
+
+  margin: 6px;
+  font-size: 14px;
+  font-weight: bold;
+
+}
+.footer-tools select{
+  border: 1px solid #1a1b2a;
+  background: #fff;
+  border-radius: 3px;
+  padding: 5px;
+  outline: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+table thead  th{
+  padding: 10px;
+}
+
+.footer-tools select option{
+  padding: 10px;
+  display: inline-block;
+}
+table tbody td{
+  padding: 10px;
+}
+.datatable-container .datatable td{
+ border-bottom:solid 1px var(--dt-border-color);
+}
+.datatable-container .datatable tbody tr:nth-child(event){
+ background-color:var(--dt-even-row-color);
+}
